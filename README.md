@@ -38,7 +38,8 @@ scMap uses data attributes to associate elements with a object literal map. Map 
 * attachFormEvents: Adds tracking to form submissions. Form element values can be used as wildcards.
 * replaceWildCards: Replaces wildcards in map with attribute values or form values.
 
-Optional:
+Optional
+
 * data-sc-event: user event (default is 'click')
 ```bash
 <button data-sc-event="mouseover" data-sc-item="tracked-item" title="Sample Tracked Item">...</button>
@@ -72,6 +73,8 @@ scMap = {
 ----------------------------------------
 
 ### More info:
+
+Check the demo page.
 
 http://blogs.omniture.com/2009/03/12/custom-link-tracking-capturing-user-actions/
 
