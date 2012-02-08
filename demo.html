@@ -17,10 +17,10 @@
 		</header>
 		<div id="main">
 		    <!-- MAIN CONTENT -->
-			<button data-sc-item="tracked-item">Sample Tracked Item ("tracked-item" in map)</button>
-			<button data-sc-item="tracked-item2">Another Tracked Item ("tracked-item2" in map)</button>
-			<button data-sc-item="tracked-item">Yet Another Tracked Item ("tracked-item" in map)</button>
-			<button data-sc-item="tracked-item2">And Still Another Tracked Item ("tracked-item2" in map)</button>
+			<button data-sc-item="tracked-item" title="Sample Tracked Item">Sample Tracked Item ("tracked-item" in map)</button>
+			<button data-sc-item="tracked-item2" title="Another Tracked Item">Another Tracked Item ("tracked-item2" in map)</button>
+			<button data-sc-item="tracked-item" title="Yet Another Tracked Item">Yet Another Tracked Item ("tracked-item" in map)</button>
+			<button data-sc-item="tracked-item2" title="And Still Another Tracked Item">And Still Another Tracked Item ("tracked-item2" in map)</button>
 		</div>
 		<footer>
 		    <!-- FOOTER -->
@@ -30,16 +30,34 @@
 		Scripts loaded like this for demo purposes. 
 		Use a script loader.
 	 -->
+	<script type="text/javascript" src="libs/jquery.min.js"></script>
 	<script type="text/javascript" src="YOUR S-CODE FILE"></script>
 	<script type="text/javascript" src="scMap.js"></script>
-	<script type="text/javascript">
+	<script type="text/javascript">		
 		scMap = {
+			/*
+			 * Any property in "s" can be added through the map. 
+			 * Wildcards that are escaped with { }  will be replaced
+			 * with the elements matching attribute.
+			 * 
+			 */
 			'tracked-item' : {
-				
-				},
+				'linkTrackName':'Button-{title}',
+				'linkTrackVars':'products,events,eVar9',
+				'linkTrackEvents':'event9',
+				'type':'o', 
+				'products':'product',
+				'eVar9': 'Just a button',
+				'events':'event9'
+			},
 			'tracked-item2' : {
-				
-				}
+				'linkTrackName':'Button-{title}',
+				'linkTrackVars':'events,eVar9',
+				'linkTrackEvents':'event9',
+				'type':'o', 
+				'eVar9': 'Just another button',
+				'events':'event9'
+			}
 		}
 	</script>
 </body>
