@@ -1,7 +1,7 @@
 var siteCatalyst = {
 	init: function(el) {
 		if (typeof scMap != "undefined") {
-			$el = !el ? $('html') : $(el);
+			$el = !el ? $('body') : $(el);
 			$('*[data-sc-item]:not(form)',$el).each($.proxy(function(idx,el) {
 				this.attachLinkEvents(el);
 			},this));
