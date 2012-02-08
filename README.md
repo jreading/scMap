@@ -41,12 +41,12 @@ scMap uses data attributes to associate elements with a object literal map. Map 
 Optional
 
 * data-sc-event: user event (default is 'click')
-```bash
+```
 <button data-sc-event="mouseover" data-sc-item="tracked-item" title="Sample Tracked Item">...</button>
 ```
 
 * init argument: use init(element) to scope DOM elements i.e. an ajax response (default is 'body')
-```bash
+```
 siteCatalyst.init($('ajax-response-wrapper'));
 ```
 
