@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>JsModuleBP Demo</title>
+	<title>scMap Demo</title>
 	<meta name="title" content="">
 	<meta name="description" content="">
 	<meta name="keywords" content="">
@@ -16,11 +16,62 @@
 		    <!-- HEADER -->
 		</header>
 		<div id="main">
-		    <!-- MAIN CONTENT -->
+			<h1>Site Catalyst scMap Demo</h1>
+			<p>
+			Remember to add a valid s_code file.
+			</p>
 			<button data-sc-item="tracked-item" title="Sample Tracked Item">Sample Tracked Item ("tracked-item" in map)</button>
 			<button data-sc-item="tracked-item2" title="Another Tracked Item">Another Tracked Item ("tracked-item2" in map)</button>
 			<button data-sc-item="tracked-item" title="Yet Another Tracked Item">Yet Another Tracked Item ("tracked-item" in map)</button>
 			<button data-sc-item="tracked-item2" title="And Still Another Tracked Item">And Still Another Tracked Item ("tracked-item2" in map)</button>
+			<p>There are two templates in the map. The idea is to have one map item for each tracking that has the same properties.</p>
+			<hr>
+			<p>
+			Use a proxy for the form submission to see tracking codes.</p>
+			<form action="#" data-sc-item="tracked-form">
+				<label>Name <input type="text" name="name" required="required"></label>
+				<label>Email <input type="email" name="email" required="required"></label>
+				<button type="submit">SUBMIT</button>
+			</form>
+			<p>Form values get added to the tracking.</p>
+			<hr>
+			<p>Here's the map:</p>
+			<pre>
+			scMap = {
+				/*
+				 * Any property in "s" can be added through the map. 
+				 * Wildcards that are escaped with { }  will be replaced
+				 * with the elements matching attribute.
+				 * 
+				 */
+				'tracked-item' : {
+					'linkTrackName':'Button-{title}',
+					'linkTrackVars':'products,events,eVar9',
+					'linkTrackEvents':'event9',
+					'type':'o', 
+					'products':'product',
+					'eVar9': 'Just a button',
+					'events':'event9'
+				},
+				'tracked-item2' : {
+					'linkTrackName':'Button-{title}',
+					'linkTrackVars':'events,eVar9',
+					'linkTrackEvents':'event9',
+					'type':'o', 
+					'eVar9': 'Just another button',
+					'events':'event9'
+				},
+				'tracked-form' :{
+					'linkTrackName':'Form',
+					'linkTrackVars':'events,eVar1,eVar2',
+					'linkTrackEvents':'event1',
+					'type':'o', 
+					'eVar1': 'Name: {name}',
+					'eVar2': 'Email: {email}',
+					'events':'event1'
+				}
+			}
+			</pre>
 		</div>
 		<footer>
 		    <!-- FOOTER -->
@@ -57,6 +108,15 @@
 				'type':'o', 
 				'eVar9': 'Just another button',
 				'events':'event9'
+			},
+			'tracked-form' :{
+				'linkTrackName':'Form',
+				'linkTrackVars':'events,eVar1,eVar2',
+				'linkTrackEvents':'event1',
+				'type':'o', 
+				'eVar1': 'Name: {name}',
+				'eVar2': 'Email: {email}',
+				'events':'event1'
 			}
 		}
 		
