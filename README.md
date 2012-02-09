@@ -45,6 +45,13 @@ Optional
 <button data-sc-event="mouseover" data-sc-item="tracked-item" title="Sample Tracked Item">...</button>
 ```
 
+* data-sc-url: url to track if not a link (default is event target)
+```
+<button data-sc-url="somewhere.html" data-sc-item="tracked-item" title="Sample Tracked Item">...</button>
+```
+
+
+
 * init argument: use init(element) to scope DOM elements i.e. an ajax response (default is 'body')
 ```
 siteCatalyst.init($('ajax-response-wrapper'));
