@@ -1,17 +1,22 @@
 body {
-	background: #f4f0ea;
-	font-family: "Arial", Arial, sans-serif;
-	font-size: 12px;	
+	background: #cfd2d2;
+	font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans serif;
+	font-size: 14px;	
 }
 
 h1, h2 {
-	margin: 8px;
+	margin: 0px;
 	clear: left;
+	font-size: 28px;
 }
 
 h2 {
 	font-weight: normal;
 	font-size: 20px;
+}
+
+p {
+	font-size: 18px;
 }
 
 button{
