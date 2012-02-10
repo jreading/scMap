@@ -17,17 +17,17 @@
 		</header>
 		<div id="main">
 			<h1>Site Catalyst scMap Demo</h1>
-			<p>
-			Remember to add a valid s_code file.
-			</p>
+			<hr>
+			<h2>Custom Link Tracking</h2>
 			<button data-sc-item="tracked-item" title="Sample Tracked Item">Sample Tracked Item ("tracked-item" in map)</button>
 			<button data-sc-item="tracked-item2" title="Another Tracked Item">Another Tracked Item ("tracked-item2" in map)</button>
 			<button data-sc-item="tracked-item" title="Yet Another Tracked Item">Yet Another Tracked Item ("tracked-item" in map)</button>
 			<button data-sc-item="tracked-item2" title="And Still Another Tracked Item">And Still Another Tracked Item ("tracked-item2" in map)</button>
 			<p>There are only two templates in the map for these elements. The idea is to have one map item for each tracking item that shares the same properties.</p>
+			<p>* Remember to add a valid s_code file to this page.</p>
 			<hr>
-			<p>
-			Use a proxy for the form submission to see tracking codes.</p>
+			<h2>Custom Form Tracking</h2>
+			<p>Use a proxy for the form submission to see tracking codes.</p>
 			<form action="#" data-sc-item="tracked-form">
 				<label>Name <input type="text" name="name" required="required"></label>
 				<label>Email <input type="email" name="email" required="required"></label>
@@ -35,7 +35,7 @@
 			</form>
 			<p>Form values get added to the tracking.</p>
 			<hr>
-			<p>Here's the map:</p>
+			<h2>Here's the map:</h2>
 			<pre>
 			scMap = {
 				/*
