@@ -2,14 +2,16 @@ var siteCatalyst = {
 	init: function(el) {
 		if (typeof scMap != "undefined") {
 			$el = !el ? document.querySelector('body') : document.querySelector(el);
-
-			[].forEach.call($el.querySelectorAll('*[data-sc-item]:not(form)'), function(el) {
-				siteCatalyst.attachLinkEvents(el);
-			});
 			
-			[].forEach.call($el.querySelectorAll('form[data-sc-item]'), function(el) {
-				siteCatalyst.attachFormSubmit(el);
-			});
+			$els = $el.querySelectorAll('*[data-sc-item]:not(form)');
+			for (var i = 0; i < $els.length; i++) {
+				siteCatalyst.attachLinkEvents($els[i]);
+			}
+			
+			$forms = $el.querySelectorAll('form[data-sc-item]');
+			for (var i = 0; i < $forms.length; i++) {
+				siteCatalyst.attachLinkEvents($forms[i]);
+			}
 		}
 	},
 	attachLinkEvents: function(el) {
