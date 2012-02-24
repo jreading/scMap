@@ -9,7 +9,7 @@ Mapping templates for Omniture / SiteCatalyst
 
 ### What it is:
 
-A mapping template for Omniture custom link tracking that use data attributes as keys. 
+A mapping template system for Omniture custom link and form tracking. 
 
 ----------------------------------------
 
@@ -17,7 +17,7 @@ A mapping template for Omniture custom link tracking that use data attributes as
 
 scMap uses data attributes to associate elements with a object literal map. Map items can be shared for common tracking tasks that use the same properties. Wildcards ( {attribute} ) can be used to place unique values in the tracking instance.
 
-```bash
+```
 <button data-sc-item="tracked-item" title="Sample Tracked Item">...</button>
 
 <form action="#" data-sc-item="tracked-form">
